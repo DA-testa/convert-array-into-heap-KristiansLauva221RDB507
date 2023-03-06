@@ -1,3 +1,5 @@
+import sys
+
 def sift_down(data, i, swaps):
     """
     Performs sift-down operation on the element at index i in the array.
@@ -29,7 +31,7 @@ def build_heap(data):
 
 if __name__ == "__main__":
     n = int(input())
-    data = list(map(int, input().split()))
+    data = list(map(int, input()))
     assert len(data) == n
     swaps = build_heap(data)
     print(len(swaps))
