@@ -72,7 +72,8 @@ if __name__ == "__main__":
     if "F" in input_type:
         filename = input()
         if "a" not in filename:
-            with open(str("test/"+filename), mode="r") as f:
+           with open(filename, mode="r") as f:
+
                 n = int(f.readline())
                 data = list(map(int, f.readline().split()))
         else:
