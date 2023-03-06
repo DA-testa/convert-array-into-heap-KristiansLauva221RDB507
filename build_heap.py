@@ -71,13 +71,13 @@ if __name__ == "__main__":
     input_type = input()
     if "F" in input_type:
         filename = input()
-        with open(filename, 'r') as f:
-            n = int(f.readline())
-            data = list(map(int, f.readline()))
-        n = int(input())
-        data = list(map(int, input().split()))
+        if "a" not in filename:
+            with open(str("test/"+filename), mode="r") as f:
+                n = int(f.readline())
+                data = list(map(int, f.readline()))
+        else:
+            print("error")
     elif "I" in input_type:
-        
         n = int(input())
         data = list(map(int, input().split()))
 
