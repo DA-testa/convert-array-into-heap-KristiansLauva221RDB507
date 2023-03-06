@@ -30,10 +30,9 @@ def build_heap(data):
 
 
 if __name__ == "__main__":
-    n = int(input())
-    data = list(map(int, input()))
-    assert len(data) == n
-    swaps = build_heap(data)
+    n = int(sys.stdin.readline())
+    data = map(int, sys.stdin.readline().split())
+    swaps = build_heap(list(data))
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
