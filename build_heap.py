@@ -70,10 +70,10 @@ def build_heap(data, n):
 if __name__ == "__main__":
     input_type = input()
     if "F" in input_type:
-        filename = input("Enter filename: ")
+        filename = input()
         with open(filename, 'r') as f:
             n = int(f.readline())
-            data = list(map(int, f.readline().split()))
+            data = list(map(int, f.readline()))
         n = int(input())
         data = list(map(int, input().split()))
     elif "I" in input_type:
