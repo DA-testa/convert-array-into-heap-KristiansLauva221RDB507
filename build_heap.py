@@ -1,13 +1,13 @@
 import sys
 
 
-def build_heap(n):
+def build_heap(data):
    
     swaps = []
-    for i in range(len(n) -1, -1, -1):
+    for i in range(len(data) -1, -1, -1):
         while i!= 0:
-            if n[i]<n[int((i-1)/2)]:
-                n[i],n[int((i-1)/2)] = n[int((i-1)/2)],n[i]
+            if data[i]<data[int((i-1)/2)]:
+                data[i],data[int((i-1)/2)] = data[int((i-1)/2)],data[i]
                 swaps.append((i,int((i-1)/2)))
             i = int((i-1)/2)
     return swaps
